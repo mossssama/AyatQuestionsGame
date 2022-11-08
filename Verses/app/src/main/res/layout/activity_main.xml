@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvAyah"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="آية"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeStepGranularity="2sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="#FDD835"
+        app:layout_constraintBottom_toTopOf="@+id/tvSurrah"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSurrah"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:hint="سورة"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:background="#C0CA33"
+        app:layout_constraintBottom_toTopOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:background="@color/teal_200"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="رقم الآية"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1C6C64"
+        android:textColor="@color/white"
+        android:text="بحث"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
